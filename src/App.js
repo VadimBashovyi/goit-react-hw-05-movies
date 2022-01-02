@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { lazy, Suspense } from 'react'
+import { ToastContainer } from 'react-toastify'
+import { Switch, Route } from 'react-router-dom'
+import AppBar from './components/AppBar/AppBar'
+import Container from './components/Container'
+import LoaderSpinner from './components/LoaderSpinner/LoaderSpinner'
 
-function App() {
+import 'react-toastify/dist/ReactToastify.css'
+const HomePage = lazy(() => import('./pages/HomePage'))
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Container>
+      <AppBar />
+      <Suspense fallback={<LoaderSpinner />}>
+        <Switch>
+          <Route path="/" exact>
+            <HomePage />
+          </Route>
+        </Switch>
+      </Suspense>
+    </Container>
+  )
 }
-
-export default App;

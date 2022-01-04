@@ -17,8 +17,18 @@ export default function App() {
           <Route path="/" exact>
             <HomePage />
           </Route>
+          <Route path="/movies">
+            <MoviesPage />
+          </Route>
+          <Route path="/movies/:movieId">
+            <MoviesDetailsPage />
+          </Route>
+          <Route>
+            <NotFoundPage />
+          </Route>
         </Switch>
       </Suspense>
+      <ToastContainer autoClose={3000} />
     </Container>
   )
 }

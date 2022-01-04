@@ -32,6 +32,5 @@ MoviesGalleryItem.propTypes = {
   id: PropTypes.number,
   poster: PropTypes.string,
   title: PropTypes.string,
-  vote: PropTypes.number,
   release: PropTypes.string,
 }

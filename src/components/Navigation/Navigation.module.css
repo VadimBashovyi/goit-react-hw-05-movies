@@ -4,7 +4,7 @@
   text-decoration: none;
   padding: 12px;
   font-weight: 500;
-  color: #2a363b;
+  color: #fff;
   font-size: 18px;
   margin-right: 10px;
 }
@@ -15,7 +15,7 @@
   position: absolute;
   bottom: 0;
   right: -1px;
-  background-color: #2196f3;
+  background-color: #778899;
   transition: all linear 250ms;
 }
 .link:hover::before {
@@ -24,6 +24,5 @@
 }
 
 .activeLink {
-  composes: link;
-  color: #2196f3;
+  color: #d8bfd8;
 }

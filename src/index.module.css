@@ -4,7 +4,6 @@ h3,
 h4,
 h5,
 h6,
-p,
 ul,
 ol {
   margin-top: 0;
@@ -34,7 +33,7 @@ body {
     sans-serif;
   font-size: 16px;
   color: #212121;
-  background-color: #fff;
+  background: radial-gradient(circle farthest-corner, #fbf2eb, #352a3b);
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

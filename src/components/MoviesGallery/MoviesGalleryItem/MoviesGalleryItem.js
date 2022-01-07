@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-import defaultImage from '../../../images/noimage.jpg'
+import defaultImage from '../../../images/noImage.jpg'
 
 import styles from './MoviesGalleryItem.module.css'
 export default function MoviesGalleryItem({ id, poster, title, release }) {
